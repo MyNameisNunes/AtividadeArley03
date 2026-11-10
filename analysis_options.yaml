@@ -1,0 +1,17 @@
+# Análise estática: lints recomendados do Flutter.
+# https://dart.dev/tools/analysis
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  exclude:
+    - build/**
+    - android/**
+    - linux/**
+
+linter:
+  rules:
+    # Estes lints sugerem sintaxe recente do Dart (parâmetros nomeados
+    # privados `this._x` e elementos null-aware `?x`). Mantemos a forma
+    # tradicional por legibilidade e compatibilidade com SDKs anteriores.
+    prefer_initializing_formals: false
+    use_null_aware_elements: false
